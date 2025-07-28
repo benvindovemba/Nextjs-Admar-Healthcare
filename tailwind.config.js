@@ -2,7 +2,9 @@
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -21,7 +23,6 @@ module.exports = {
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
-        // adicione mais se quiser
       },
       animation: {
         fadeInUp: 'fadeInUp 0.8s ease-out forwards',
@@ -35,4 +36,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+}

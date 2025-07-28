@@ -18,8 +18,8 @@ import {
 const Footer = () => {
   return (
     <>
-      <section>
-        <div className="bg-gray-50">
+      <section className='relative bg-gray-50 overflow-hidden'>
+        <div className="relative z-10 px-4 sm:px-6 md:px-10 lg:px-40 py-16 md:py-20">
           <div className="max-w-screen-xl py-10 px-4 sm:px-6 text-gray-800 grid sm:grid-cols-2 gap-8 mx-auto">
             
             {/* Logo + Navegação + Redes sociais */}
@@ -32,10 +32,9 @@ const Footer = () => {
               />
 
               <div className="flex text-gray-500 uppercase text-sm gap-1 pt-2 flex-wrap" data-aos="fade-right" data-aos-duration="3000">
-                <a href="#" className="mr-2 hover:text-gray-900">Home</a>
-                <a href="#" className="mr-2 hover:text-gray-900">Sobre nós</a>
-                <a href="#" className="mr-2 hover:text-gray-900">Serviços</a>
-                <a href="#" className="mr-2 hover:text-gray-900">Contacto</a>
+                <a href="/" className="mr-2 hover:text-gray-900">Home</a>
+                <a href="/site/about-us" className="mr-2 hover:text-gray-900">Sobre nós</a>
+                <a href="/site/service" className="mr-2 hover:text-gray-900">Serviços</a>
               </div>
 
               <div className="flex items-center gap-3 mt-4 text-gray-600 flex-wrap" data-aos="fade-right" data-aos-duration="3000">

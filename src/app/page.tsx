@@ -1,22 +1,28 @@
 'use client'
 
 import Image from "next/image";
-import Header from "./components/Header/Header";
-import Banner from "./components/Banner/Banner";
-import Explorer from "./components/Explorer/Explorer";
-import SolutionStep from "./components/Solution/SolutionStep";
-import ConsultSolution from "./components/Consult/ConsultSolution";
-import Appointment from "./components/Appointment/Appointment";
-import AboutUs from "./components/About Us/AboutUs";
-import Selling from "./components/Selling/Selling";
-import InstantCare from "./components/Instant/InstantCare";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Footer from "./components/Footer/Footer";
-import Explore from "./components/Explorer/Explore";
-import Order from "./components/Order/Order";
+import Header from "./components/header/Header";
+import Banner from "./components/banner/Banner"
+import Explorer from "./explorer/Explorer";
+import AboutUs from "./site/about-us/page";
+import Selling from "./selling/page";
+import InstantCare from "./instant/page";
+import Footer from "./components/footer/Footer";
+import Explore from "./explorer/page";
+import Order from "./order/page";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import Service from "./site/service/page";
+import Specialists from "./specialists/page";
+import Doctor from "./site/doctor/page";
+import Blog from "./site/blogs/page";
+import Gallery from "./site/gallery/page";
+import SobreResumo from "./site/about-us/resumo/page";
+import AdminPanel from "./components/admin/AdminPanel";
+import Testimonials from "./site/testimonials/page";
+import Appointment from "./site/appointment/page";
+import SolutionStep from "./components/solution/SolutionStep";
 
 export default function Home() {
     useEffect(() => {
@@ -29,13 +35,29 @@ export default function Home() {
     <>
       <Header />
       <Banner />
-      <AboutUs />
-      <InstantCare />
-      <SolutionStep />
-      <Appointment />
+      <SobreResumo /> 
+      <Service />
       <Testimonials />
+      <Gallery />
+      <Appointment />
       <Footer />
 
+
+      
+    
+      
+      {/* <InstantCare />
+      <SolutionStep />
+      <Doctor />
+      
+      
+      <AdminPanel /> */}
+      
+      
+      {/* <Explorer /> */}
+      
+
+      
       {/************************** */}
       {/* <Explore />
       
@@ -46,7 +68,7 @@ export default function Home() {
       
       <Selling /> 
       
-      <InstantCare /> */}
+      <InstantCare /> */} 
       
     </>
   );
