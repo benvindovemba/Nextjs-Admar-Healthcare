@@ -1,13 +1,13 @@
 'use client'
 
 import Image from "next/image";
-import Header from "./components/header/Header";
-import Banner from "./components/banner/Banner"
+import Header from "./components/Header/Header";
+import Banner from "./components/Banner/Banner"
 import Explorer from "./explorer/Explorer";
 import AboutUs from "./site/about-us/page";
 import Selling from "./selling/page";
 import InstantCare from "./instant/page";
-import Footer from "./components/footer/Footer";
+import Footer from "./components/Footer/Footer";
 import Explore from "./explorer/page";
 import Order from "./order/page";
 import AOS from 'aos'
