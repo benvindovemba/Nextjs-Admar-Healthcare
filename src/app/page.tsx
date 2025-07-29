@@ -14,7 +14,6 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import Service from "./site/service/page";
-import Specialists from "./specialists/page";
 import Doctor from "./site/doctor/page";
 import Blog from "./site/blogs/page";
 import Gallery from "./site/gallery/page";
@@ -22,7 +21,6 @@ import SobreResumo from "./site/about-us/resumo/page";
 import AdminPanel from "./components/admin/AdminPanel";
 import Testimonials from "./site/testimonials/page";
 import Appointment from "./site/appointment/page";
-import SolutionStep from "./components/solution/SolutionStep";
 
 export default function Home() {
     useEffect(() => {
@@ -41,34 +39,6 @@ export default function Home() {
       <Gallery />
       <Appointment />
       <Footer />
-
-
-      
-    
-      
-      {/* <InstantCare />
-      <SolutionStep />
-      <Doctor />
-      
-      
-      <AdminPanel /> */}
-      
-      
-      {/* <Explorer /> */}
-      
-
-      
-      {/************************** */}
-      {/* <Explore />
-      
-      <Order />
-      
-      {/* <Explorer /> 
-      <ConsultSolution />
-      
-      <Selling /> 
-      
-      <InstantCare /> */} 
       
     </>
   );
