@@ -1,7 +1,7 @@
 'use server'
 
 import { z } from 'zod'
-import prisma from '../../../../../backend/src/prisma' // Ajuste o caminho conforme seu projeto
+//import prisma from '../../../../../backend/src/prisma' // Ajuste o caminho conforme seu projeto
 // import { sendEmail } from '@/lib/email' // opcional, se quiser enviar por email
 
 const ContactSchema = z.object({
@@ -26,7 +26,7 @@ export async function sendContactMessage(_: any, formData: FormData) {
     return { success: false, error: errorMessage }
   }
 
-  const { name, email, subject, message } = parsed.data
+  /* const { name, email, subject, message } = parsed.data
 
   try {
     // ✅ Salvar no banco de dados
@@ -38,13 +38,13 @@ export async function sendContactMessage(_: any, formData: FormData) {
         message,
       },
     })
-
+ */
     // ✅ (Opcional) Enviar e-mail
     // await sendEmail({ to: 'admin@seusite.com', subject, body: message })
 
-    return { success: true, message: 'Mensagem enviada com sucesso!' }
-  } catch (error) {
-    console.error('Erro ao salvar a mensagem:', error)
-    return { success: false, error: 'Erro ao enviar mensagem. Tente novamente.' }
-  }
+  //   return { success: true, message: 'Mensagem enviada com sucesso!' }
+  // } catch (error) {
+    // console.error('Erro ao salvar a mensagem:', error)
+    // return { success: false, error: 'Erro ao enviar mensagem. Tente novamente.' }
+  //}
 }

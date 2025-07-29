@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import AuthLayout from "../../components/layouts/AuthLayout";
+import AuthLayout from "@/app/components/layouts/AuthLayout";
+import TextLink from "@/components/ui/TextLink";
+import { Field, Label, Input, Select, Checkbox, Button } from "@headlessui/react";
 
 
  const Register = () => {
@@ -44,19 +46,19 @@ import AuthLayout from "../../components/layouts/AuthLayout";
             <option>United States</option>
           </Select>
         </Field>
-        <CheckboxField>
+        <div>
           <Checkbox name="remember" />
           <Label>Get emails about product updates and news.</Label>
-        </CheckboxField>
+        </div>
         <Button type="submit" className="w-full">
           Create account
         </Button>
-        <Text>
+        <text>
           Already have an account?{' '}
           <TextLink href="#">
-            <Strong>Sign in</Strong>
+            <strong>Sign in</strong>
           </TextLink>
-        </Text>
+        </text>
       </form>
     </AuthLayout>
   )
