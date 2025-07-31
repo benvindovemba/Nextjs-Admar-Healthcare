@@ -8,6 +8,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import clsx from 'clsx'
+import { Button } from '@/components/ui/Button'
 
 const categories = ['Todas', 'Atividades', 'Espaços', 'Equipa'] as const
 
@@ -76,9 +77,10 @@ export default function GalleryClient() {
 
           <div className="flex justify-center flex-wrap gap-3 mb-10">
             {categories.map((cat) => (
-              <button
-                key={cat}
+              <Button 
+                key={cat} 
                 onClick={() => setActiveCategory(cat)}
+                variant='custom'
                 className={clsx(
                   'px-4 py-2 rounded-full text-sm font-medium border transition',
                   activeCategory === cat
@@ -87,7 +89,7 @@ export default function GalleryClient() {
                 )}
               >
                 {cat}
-              </button>
+              </Button>
             ))}
           </div>
 

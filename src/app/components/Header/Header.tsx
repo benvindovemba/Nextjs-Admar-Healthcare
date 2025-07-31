@@ -101,14 +101,14 @@ const Header = () => {
           </a>
         </div>
         <div className="flex lg:hidden">
-          <button
+          <Button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="size-6" />
-          </button>
+          </Button>
         </div>
         {/* ************ desktop menu ************** */}
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
@@ -227,7 +227,7 @@ const Header = () => {
             </Button>
           </Link>
         </div> 
-        {/* ************ mobile menu button ************** */}
+        {/* ************ mobile menu Button ************** */}
       </nav>
       {/* ************ mobile menu dialog ************** */}
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -242,14 +242,14 @@ const Header = () => {
                 className="h-8 w-auto"
               />
             </a>
-            <button
+            <Button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon aria-hidden="true" className="size-6" />
-            </button>
+            </Button>
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
@@ -301,10 +301,10 @@ const Header = () => {
               </div>
               <div className="py-6">
                 <Link href="/site/authlayout/login">
-                  <button className="w-full bg-gradient-to-r inline-flex items-center justify-center from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold py-2 px-10 rounded-md shadow-lg hover:scale-105 transition-all gap-1">
+                  <Button className="w-full bg-gradient-to-r inline-flex items-center justify-center from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold py-2 px-10 rounded-md shadow-lg hover:scale-105 transition-all gap-1">
                     Log in 
                     <ArrowRightEndOnRectangleIcon className='w-5 h-5' aria-hidden="true"/>
-                  </button>
+                  </Button>
                 </Link>
               </div>
             </div>

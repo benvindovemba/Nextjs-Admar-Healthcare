@@ -12,6 +12,7 @@ import {
   MailIcon,
   PhoneIcon,
 } from 'lucide-react'
+import { Button } from '@/components/ui/Button'
 
 type Doctor = {
   id: string
@@ -99,9 +100,10 @@ export default function DoctorPage() {
               />
               <h3 className="text-xl font-semibold text-gray-800">{doctor.name}</h3>
               <p className="text-sm text-gray-600">{doctor.specialty}</p>
-              <button
+              <Button
+                variant="custom"
                 onClick={() => setSelectedDoctor(doctor)}
-                className="mt-3 inline-flex items-center gap-2 bg-blue-800 text-white px-5 py-2 rounded-full hover:bg-blue-900 text-sm font-medium transition"
+                className="text-base bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-400 focus:outline-none transition-all font-semibold w-full max-w-[220px] flex items-center justify-center gap-2 mx-auto group"
               >
                 Ver Detalhes
                 <svg
@@ -113,7 +115,7 @@ export default function DoctorPage() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 12H3m6-6l-6 6 6 6" />
                 </svg>
-              </button>
+              </Button>
             </article>
           ))}
         </div>
@@ -144,13 +146,14 @@ function DoctorModal({ doctor, onClose }: { doctor: Doctor; onClose: () => void 
         role="dialog"
         aria-modal="true"
       >
-        <button
+        <Button
+          variant='custom'
           onClick={onClose}
           aria-label="Fechar"
           className="absolute top-4 right-4 text-gray-400 hover:text-red-600 text-2xl"
         >
           &times;
-        </button>
+        </Button>
 
         <div className="flex items-center gap-6">
         <div className="w-[150px] h-[150px] relative rounded-full overflow-hidden border-2 border-blue-100 shadow-lg">

@@ -7,6 +7,7 @@ import {
   FaBehance, FaEnvelope, FaWhatsapp, FaMapMarkerAlt
 } from 'react-icons/fa'
 import { FiPhone } from 'react-icons/fi' // Substituto elegante do ícone de telefone
+import { Button } from '@/components/ui/Button'
 
 export default function ContactPage() {
   const [state, formAction] = React.useActionState(sendContactMessage, null)
@@ -56,12 +57,12 @@ export default function ContactPage() {
               required
               className="w-full bg-gray-100 border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button
-              type="submit"
+            <Button
+              type="submit" variant='custom'
               className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 font-medium rounded-lg transition uppercase tracking-wide"
             >
               Enviar Mensagem
-            </button>
+            </Button>
             {state?.success && <p className="text-green-600 text-sm">{state.message}</p>}
             {state?.error && <p className="text-red-500 text-sm">{state.error}</p>}
           </form>

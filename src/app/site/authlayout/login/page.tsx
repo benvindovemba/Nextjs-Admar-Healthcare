@@ -66,7 +66,7 @@ import { handleLogin } from "./action";
           </div>
 
           {/*********** Botão Entrar ***********/}
-          <Button type="submit" className="w-full">
+          <Button variant="accent" type="submit" className="w-full">
             Entrar
           </Button>
 

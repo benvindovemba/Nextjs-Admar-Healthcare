@@ -1,5 +1,6 @@
 'use client'
 
+import { Button } from '@/components/ui/Button'
 import { doctors } from '@/lib/doctors'
 import React from 'react'
 import CountUp from 'react-countup'
@@ -155,10 +156,10 @@ const AboutUs = () => {
           <p className="text-sm text-gray-600 mb-4">Entre em contacto connosco — ajudamos a identificar os serviços ideais para o seu familiar.</p>
           <div className="flex justify-center gap-4">
             <a href="/site/contact">
-              <button className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-700 transition">Fale Conosco</button>
+              <Button variant='custom' className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-700 transition">Fale Conosco</Button>
             </a>
             <a href="/site/appointment">
-              <button className="border border-blue-600 text-blue-600 px-5 py-2 rounded-full text-sm hover:bg-blue-100 transition">Agendar Avaliação Gratuita</button>
+              <Button variant='custom' className="border border-blue-600 text-blue-600 px-5 py-2 rounded-full text-sm hover:bg-blue-100 transition">Agendar Avaliação Gratuita</Button>
             </a>
           </div>
         </div>

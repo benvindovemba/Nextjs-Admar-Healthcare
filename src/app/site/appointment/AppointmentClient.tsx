@@ -240,6 +240,7 @@ const Appointment = () => {
             <Button
               type="submit"
               disabled={loading}
+              variant='custom'
               className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold rounded-full px-8 py-3 text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               {loading ? 'Agendando...' : 'Agendar Consulta'}

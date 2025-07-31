@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { custom } from 'zod'
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: 'default' | 'secondary' | 'accent' | 'destructive' | 'ghost' | 'outline' | 'link'
+  variant?: 'default' | 'secondary' | 'accent' | 'destructive' | 'ghost' | 'outline' | 'link' | 'custom'
   size?: 'sm' | 'md' | 'lg' 
 }
 
@@ -30,11 +30,12 @@ export const Button = ({
     ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 hover:text-gray-900',
     outline: 'border border-gray-300 text-gray-900 bg-transparent hover:bg-gray-100',
     link: 'bg-transparent text-primary hover:underline p-0 h-auto',
+    custom: '',
 
   }
 
   return (
-    <button
+    <Button
       className={clsx(base, sizes[size], variants[variant], className)}
       {...props}
     />

@@ -7,6 +7,7 @@ import Image from 'next/image'
 import {
   FaFacebook, FaTwitter, FaWhatsapp, FaLinkedin,
 } from 'react-icons/fa'
+import { Button } from '@/components/ui/Button'
 
 // Mock de posts (substitua por fetch do backend futuramente)
 const posts = [
@@ -88,12 +89,12 @@ export default function BlogPostPage() {
               rows={4}
               required
             />
-            <button
-              type="submit"
+            <Button
+              type="submit" variant='custom'
               className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
             >
               Comentar
-            </button>
+            </Button>
           </form>
 
           <ul className="mt-6 space-y-3">

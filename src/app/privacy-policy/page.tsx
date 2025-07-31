@@ -96,6 +96,7 @@ const PrivacyPolicyPage = () => {
       {/* Botão de Aceitar */}
       <div className="mt-10 flex items-center gap-4">
         <Button
+          variant='custom'
           className="bg-blue-700 text-white hover:bg-blue-800"
           onClick={handleAccept}
         >

@@ -6,6 +6,7 @@ import {
   StretchHorizontal, CheckCircle, CircleAlert, X
 } from 'lucide-react'
 import ModalPortal from '@/app/components/ModalPortal'
+import { Button } from '@/components/ui/Button'
 
 type Service = {
   id: string
@@ -174,7 +175,8 @@ export default function ServicePage({ filter = 'Todos' }: Props) {
                    {service.specialty}
                 </p>
               
-                <button
+                <Button
+                  variant="custom"
                   onClick={() => setSelectedService(service)}
                   className="text-base bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-400 focus:outline-none transition-all font-semibold w-full max-w-[220px] flex items-center justify-center gap-2 mx-auto group"
                 >
@@ -187,7 +189,7 @@ export default function ServicePage({ filter = 'Todos' }: Props) {
                     <CircleAlert className="w-5 h-5 text-white group-hover:text-blue-100" />
                   </motion.span>
                   Mais Detalhes
-                </button>
+                </Button>
 
               </div>
             </motion.div>
@@ -196,12 +198,13 @@ export default function ServicePage({ filter = 'Todos' }: Props) {
 
         {filteredServices.length > 3 && (
           <div className="mt-10 text-center">
-            <button
+            <Button
+              variant="custom"
               onClick={() => setShowAll(!showAll)}
               className="text-blue-600 hover:text-blue-800 font-semibold transition"
             >
               {showAll ? 'Ver Menos' : 'Ver Todos os Serviços'}
-            </button>
+            </Button>
           </div>
         )}
       
@@ -229,13 +232,13 @@ export default function ServicePage({ filter = 'Todos' }: Props) {
           className="bg-white w-full max-w-3xl rounded-2xl shadow-2xl p-6 sm:p-8 relative space-y-6"
         >
           {/* Botão de Fechar */}
-          <button
+          <Button
             onClick={() => setSelectedService(null)}
             className="absolute top-4 right-4 text-gray-400 hover:text-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 rounded-full"
             aria-label="Fechar detalhes do serviço"
           >
             <X className="w-6 h-6" />
-          </button>
+          </Button>
 
           {/* Imagem + Informações */}
           <div className="flex flex-col sm:flex-row items-start gap-6">
