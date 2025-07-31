@@ -6,9 +6,9 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
-import { Button } from '../../../components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import Link  from 'next/link';
-
+  
 const Banner = () => {
   return (
     <div className="px-4 md:px-6 lg:px-[60px] bg-gray-100">

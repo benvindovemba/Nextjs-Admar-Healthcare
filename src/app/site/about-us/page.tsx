@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '../../../components/ui/Button'
+import { Button } from '@/components/ui/Button'
 import { doctors } from '@/lib/doctors'
 import React from 'react'
 import CountUp from 'react-countup'

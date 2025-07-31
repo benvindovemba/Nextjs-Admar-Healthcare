@@ -3,7 +3,7 @@
 import Logo from "@/../public/admar/logo.png";
 import Image from "next/image";
 import TextLink from "@/components/ui/TextLink";
-import { Button } from "@/components/ui/Button";
+import { Button } from '@/components/ui/Button'
 import { Checkbox } from "@/components/ui/Checkbox";
 import Link from "next/link";
 import AuthLayout from "./../../../components/layouts/AuthLayout";
