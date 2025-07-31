@@ -42,7 +42,7 @@ const SobreResumo = () => {
           </p>
         
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-            <a
+            <a 
               href="/site/about-us"
               className="mt-6 inline-block bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition"
             >

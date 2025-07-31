@@ -6,7 +6,7 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import Link  from 'next/link';
 
 const Banner = () => {
@@ -60,7 +60,8 @@ const Banner = () => {
                   {/* BOTÕES */}
                   <div className="md:flex gap-4 py-6 grid">
                     <Link href="/site/appointment">
-                      <Button className="w-full bg-blue-500 hover:bg-blue-700 text-white rounded-md shadow-lg px-6 py-7 text-base sm:text-lg gap-2" 
+                      <Button variant="accent" 
+                      className="w-full bg-blue-500 hover:bg-blue-700 text-white rounded-md shadow-lg px-6 py-7 text-base sm:text-lg gap-2" 
                       data-aos="fade-right" 
                       data-aos-delay="50"
                       data-aos-duration="1200"
@@ -69,9 +70,8 @@ const Banner = () => {
                       </Button>
                     </Link>
                     <Link href="/site/about-us">
-                      <Button
+                      <Button variant="ghost"
                         className="w-full bg-gray-200 hover:bg-gray-500 active:bg-gray-500 hover:text-white active:text-white rounded-md shadow-lg px-6 py-7 text-base sm:text-lg gap-2"
-                        variant="outline" 
                         data-aos="fade-right" 
                         data-aos-duration="1000"
                         data-aos-easing="ease-in-out"

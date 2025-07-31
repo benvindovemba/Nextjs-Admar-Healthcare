@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { CalendarCheck, LogOut, Plus, Users } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 

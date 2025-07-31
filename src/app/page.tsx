@@ -1,45 +1,33 @@
-'use client'
+import { Metadata } from 'next'
+import DynamicHomeClient from './DynamicHomeClient'
 
-import Image from "next/image";
-import Header from "./components/Header/Header";
-import Banner from "./components/Banner/Banner"
-import Explorer from "./explorer/Explorer";
-import AboutUs from "./site/about-us/page";
-import Selling from "./selling/page";
-import InstantCare from "./instant/page";
-import Footer from "./components/Footer/Footer";
-import Explore from "./explorer/page";
-import Order from "./order/page";
-import AOS from 'aos'
-import 'aos/dist/aos.css';
-import { useEffect } from "react";
-import Service from "./site/service/page";
-import Doctor from "./site/doctor/page";
-import Blog from "./site/blogs/page";
-import Gallery from "./site/gallery/page";
-import SobreResumo from "./site/about-us/resumo/page";
-import AdminPanel from "./components/admin/AdminPanel";
-import Testimonials from "./site/testimonials/page";
-import Appointment from "./site/appointment/page";
+export const metadata: Metadata = {
+  title: 'ADMAR | Cuidados Domiciliares de Excelência',
+  description: 'Serviços de saúde e apoio domiciliar para idosos com profissionais qualificados e atenção humanizada.',
+  openGraph: {
+    title: 'ADMAR Homecare',
+    description: 'Conheça nossos serviços personalizados para cuidados de idosos no conforto do lar.',
+    url: 'https://seudominio.com',
+    siteName: 'ADMAR Homecare',
+    images: [
+      {
+        url: 'https://seudominio.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'ADMAR Homecare',
+      },
+    ],
+    locale: 'pt_PT',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ADMAR Homecare',
+    description: 'Cuidamos com carinho no conforto da sua casa.',
+    images: ['https://seudominio.com/og-image.png'],
+  },
+}
 
 export default function Home() {
-    useEffect(() => {
-      AOS.init({
-        //
-      });
-    }, []);
-
-    return (
-    <>
-      <Header />
-      <Banner />
-      <SobreResumo /> 
-      <Service />
-      <Testimonials />
-      <Gallery />
-      <Appointment />
-      <Footer />
-      
-    </>
-  );
+  return <DynamicHomeClient />
 }

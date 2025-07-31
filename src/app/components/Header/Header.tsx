@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Button } from '../../../components/ui/Button'
 {/* ************ headlessui ************** */}
 import {
   Dialog,
@@ -46,6 +47,7 @@ import { ChevronDownIcon, HomeIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { AccessibilityIcon, ArrowRight, Camera, HospitalIcon, InfoIcon, SaladIcon, ShowerHeadIcon, SparkleIcon, TelescopeIcon, User } from 'lucide-react'
+import ThemeToggle from '@/components/ui/ThemeToggle'
 
 {/* ************ About Us and calls to action ************** */}
 const about = [
@@ -85,7 +87,7 @@ const Header = () => {
 
   return (
     <div className="relative bg-gray-50 overflow-hidden">
-    <header className="fixed top-0 left-0 w-full z-50  shadow-accent">
+    <header className="fixed top-0 left-0 w-full z-30  shadow-accent">
       <nav aria-label="Global" className="flex items-center justify-between py-6 px-4 md:px-6 lg:px-12">
         {/* ************ logo ************** */}
         <div className="flex lg:flex-1">
@@ -111,7 +113,7 @@ const Header = () => {
         {/* ************ desktop menu ************** */}
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           {/* ************ home link ************** */}
-          <a href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 hover:text-blue-600 transition-colors" 
+          <a href="/" className="inline-flex items-center gap-2 text-lg/1 font-semibold text-gray-900 hover:text-blue-600 transition-colors" 
           data-aos="fade-left"
           data-aos-duration="1000"
           data-aos-easing="ease-out-back">
@@ -121,7 +123,7 @@ const Header = () => {
           
           {/* ************ about us popover ************** */}
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900" 
+            <PopoverButton className="flex items-center gap-x-1 text-lg/1 font-semibold text-gray-900" 
             data-aos="fade-left"
             data-aos-duration="1400"
             data-aos-easing="ease-out-back">
@@ -168,7 +170,7 @@ const Header = () => {
 
           {/* ************ services popover ************** */}
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900"
+            <PopoverButton className="flex items-center gap-x-1 text-lg/1 font-semibold text-gray-900"
             data-aos="fade-left"
             data-aos-duration="1600"
             data-aos-easing="ease-out-back">
@@ -216,11 +218,13 @@ const Header = () => {
         </PopoverGroup>
         {/* ************ login link ************** */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-5">
+          {/* <ThemeToggle /> */}
           <Link href="/site/authlayout/login">
-            <button className="inline-flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded-md shadow-lg hover:scale-105 transition-all gap-1">
+            <Button variant='accent'
+            className="inline-flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded-md shadow-lg hover:scale-105 transition-all gap-1">
               Log in  
               <ArrowRightEndOnRectangleIcon className='w-5 h-5' aria-hidden="true"/>
-            </button>
+            </Button>
           </Link>
         </div> 
         {/* ************ mobile menu button ************** */}

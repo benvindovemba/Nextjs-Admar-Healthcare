@@ -1,7 +1,7 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
-import Appointment from '../site/appointment/page'
+import Appointment from '../site/appointment/AppointmentClient'
 
 const AgendarPageClient = () => {
   const searchParams = useSearchParams()
