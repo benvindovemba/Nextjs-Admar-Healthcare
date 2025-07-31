@@ -14,8 +14,8 @@ import {
   PhoneIcon,
   UserIcon
 } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
-import { Input } from '@/components/ui/Input'
+import { Button } from '../../../components/ui/Button'
+import { Input } from '../../../components/ui/Input'
 import { useSearchParams } from 'next/navigation'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 
